@@ -4,6 +4,10 @@ from django.views.decorators.http import require_POST
 from makeeya_shop.models import Product
 from .cart import Cart
 from .forms import CartAddProductForm
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404, render
+ 
+
 
 
 @require_POST
